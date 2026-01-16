@@ -21,6 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    overflow: auto;
 }
 
 #container0 {
@@ -113,7 +114,35 @@ body {
 }
 
 #pixel {
-    background-color: #DEDEE2;
+    
     border: 1px solid #0A0A0F;
+}
+
+#startModal {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEDEE2;
+    color: #000000;
+    transition: all 1s;
+    opacity: 0%;
+    margin-top: 10rem;
+    height: 13rem;
+    padding: 2rem;
+}
+
+#startModal h1 {
+    margin-bottom: 2rem;;
+}
+
+#startModal ul {
+    list-style-type: square;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
