@@ -31,11 +31,13 @@ body {
 #container1 {
     width: 50vw;
     display: flex;
+    flex-grow: 1;
     justify-content: space-between;
+    align-items: center;
 }
 
 #container1 > * {
-    background-color: #8F8F9E;
+    background: linear-gradient(#8F8F9E, #52525a);
     color: #ffffff;
     border: none;
     padding-inline: 1.5rem;
@@ -62,19 +64,48 @@ body {
 
 #colorDiv:hover {
     cursor: pointer;
-    background-color: #6b6b75;
+    
 }
 
 #colorInput {
     border-radius: 10px;
-    background-color: #8F8F9E;
+    background-color: transparent;
     border: none;
     width: 5rem;
     height: 2rem;
 }
 
+#colorOptions {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    gap: 0.4rem;
+}
+
+#colorOptions > * {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #0A0A0F;
+    transition: all 0.4s;
+}
+
+#colorOption > *:hover {
+    background-color: #727277;
+}
+
+#randomColorButton {
+    
+}
+
+#opacityButton {
+    
+}
+
 #container1 #pixelsInput {
     width: 10vw;
+    text-align: center;
+    
 }
 
 #container2 {
@@ -82,6 +113,7 @@ body {
     height: 60vh;
     border: 8px solid #8F8F9E;
     border-radius: 25px;
+    
 }
 
 #pixel {
