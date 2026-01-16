@@ -3,7 +3,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 ::-webkit-input-placeholder {
-    color: #ffffff;
+    color: #000000;
 }
 
 * {
@@ -37,8 +37,8 @@ body {
 }
 
 #container1 > * {
-    background: linear-gradient(#8F8F9E, #52525a);
-    color: #ffffff;
+    background: linear-gradient(#b9b9cc, #6f6f7a);
+    color: #000000;
     border: none;
     padding-inline: 1.5rem;
     padding-block: 1rem;
@@ -94,13 +94,7 @@ body {
     background-color: #727277;
 }
 
-#randomColorButton {
-    
-}
 
-#opacityButton {
-    
-}
 
 #container1 #pixelsInput {
     width: 10vw;
@@ -109,11 +103,13 @@ body {
 }
 
 #container2 {
-    width: 60vw;
-    height: 60vh;
+    width: 27rem;
+    height: 60rem;
     border: 8px solid #8F8F9E;
     border-radius: 25px;
-    
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 #pixel {
