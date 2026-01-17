@@ -1,5 +1,5 @@
 import { closeModal } from "./functions/closeModal.js";
-import { reset } from "./functions/reset.js";
+import { resetColor } from "./functions/resetColor.js";
 import { squareGenerator } from "./functions/squareGenerator.js";
 
 const resetButton = document.querySelector("#resetButton");
@@ -9,15 +9,16 @@ const pixelsInput = document.querySelector("#pixelsInput");
 const container = document.querySelector("#container2");
 const startModal = document.querySelector("#startModal");
 
-let color;
+let color = "red";
 
 resetButton.addEventListener("click", () => {
     console.log("resetButton");
-    reset(container);
+    resetColor(container);
 });
 
-colorInput.addEventListener("input", () => {
+colorInput.addEventListener("input", (e) => {
     console.log("colorInput");
+    color = e.target.value
 });
 
 pixelsInput.addEventListener("keydown", (e) => {
@@ -43,3 +44,11 @@ window.addEventListener("load", () => {
 window.addEventListener("click", (e) => {
     closeModal(startModal, e);
 }, { once: true});
+
+container.addEventListener("mouseover", e => {
+    if (e.target.id === "container2"){
+        return
+    }
+
+    e.target.style.backgroundColor = color;
+})
