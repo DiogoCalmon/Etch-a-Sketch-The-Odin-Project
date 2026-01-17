@@ -1,15 +1,17 @@
-import { closeModal } from "./functions/closeModal.js";
-import { resetColor } from "./functions/resetColor.js";
+import { closeModal } from "./functions/modals.js";
+import { resetColor, reset } from "./functions/resetColor.js";
 import { squareGenerator } from "./functions/squareGenerator.js";
 
 const resetButton = document.querySelector("#resetButton");
 const colorInput = document.querySelector("#colorInput");
 const pixelsInput = document.querySelector("#pixelsInput");
 
+const randomColorButton = document.querySelector("#randomColorButton");
+
 const container = document.querySelector("#container2");
 const startModal = document.querySelector("#startModal");
 
-let color = "red";
+let color = "black";
 
 resetButton.addEventListener("click", () => {
     console.log("resetButton");
@@ -21,11 +23,26 @@ colorInput.addEventListener("input", (e) => {
     color = e.target.value
 });
 
+
+
 pixelsInput.addEventListener("keydown", (e) => {
     if(e.key == "Enter"){
         if (e.target.value < 1 || e.target.value > 100) {
-            
+            const pixelsModal = document.querySelector("#pixelsModal");
+            pixelsModal.style.display = "flex";
+
+            setTimeout(() => {
+                pixelsModal.style.marginTop = "0rem";
+                pixelsModal.style.opacity = "100%";
+            }, 100);
+
+            window.addEventListener("click", e => {
+                closeModal(pixelsModal, e)
+            }, {onde: true});
+
+            return;
         }
+
         reset(container)
         squareGenerator(container, e.target.value);
     }
