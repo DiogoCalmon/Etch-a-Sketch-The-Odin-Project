@@ -15,7 +15,7 @@ const opacityButton = document.querySelector("#opacityButton");
 const container = document.querySelector("#container2");
 const startModal = document.querySelector("#startModal");
 
-let color = "rgb(255, 255, 255)";
+let color = "rgb(255, 255, 255, 1)";
 let opacity = 100;
 
 let randomColor = false;
@@ -126,7 +126,7 @@ container.addEventListener("mouseover", e => {
             newColorFormated = newColorFormated.concat("", `${rgbaOpacity})`);
             console.log("newColorFormated: "+newColorFormated);
         } else {
-            newColor = color;
+            newColor = color ;
             console.log("rgba: "+color);
 
             newColorFormated = newColor.replace("1)", "");
