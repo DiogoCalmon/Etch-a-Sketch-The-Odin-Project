@@ -83,7 +83,7 @@ body {
     gap: 0.4rem;
 }
 
-#colorOptions > * {
+.unpressed {
     padding: 0.5rem;
     border: none;
     border-radius: 10px;
@@ -91,11 +91,13 @@ body {
     transition: all 0.4s;
 }
 
-#colorOption > *:hover {
+#colorOptions > *:hover {
     background-color: #727277;
 }
 
-
+.enabled {
+    background-color: #727277;
+}
 
 #container1 #pixelsInput {
     width: 10vw;
